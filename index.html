@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패턴 마스터 바카라</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>패턴 마스터 바카라</h1>
+
+        <div class="score-board">
+            <p>내 포인트: <span id="currentPoints">1000</span></p>
+            <p>뱅커 승리: <span id="bankerWins">0</span>회</p>
+            <p>플레이어 승리: <span id="playerWins">0</span>회</p>
+            <p>타이: <span id="tieCount">0</span>회</p>
+            <p>승률: <span id="winRate">0.00%</span></p>
+        </div>
+
+        <div class="game-area">
+            <div class="bet-area">
+                <h2>다음 결과 예측 및 베팅</h2>
+                <div class="bet-options">
+                    <button id="betBanker" class="bet-button banker-btn">뱅커</button>
+                    <button id="betPlayer" class="bet-button player-btn">플레이어</button>
+                    <button id="betTie" class="bet-button tie-btn">타이 (x8)</button>
+                </div>
+                <div class="bet-amount">
+                    <label for="betAmount">베팅 금액:</label>
+                    <input type="number" id="betAmount" value="10" min="10">
+                    <button id="betMax">MAX</button>
+                </div>
+                <button id="placeBet" class="action-button">베팅하기</button>
+                <button id="resetGame" class="action-button reset-button">게임 초기화</button>
+            </div>
+
+            <div class="roadmap-area">
+                <h2>출목표 (Big Road)</h2>
+                <div id="bigRoad" class="big-road">
+                    </div>
+                <p id="gameMessage" class="message"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
